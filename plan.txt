@@ -4,7 +4,7 @@ plan
 2. implement bayes
 	-learn(class, attributes[])
 	-handle discrete and continuous attributes with hardcoded 
-3. need to learn subset of unis (training set is majority of data, testing minority)
+3. need to learn subset of unis (training set)
 4. find online rankings of "high value" or "affordable" universities
 5. we need a classification attribute: "high-value" = true if university included in these high value online rankings
 6. naive bayes will then give a probability that a given university in the test set is a high value university
