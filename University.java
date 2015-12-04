@@ -13,4 +13,7 @@ public class University{
 			scholarships = new Attribute(attributes[i]);
 		}
 	}
+
+	public attributeLikelihood(int attributeIndex){
+	}
 }

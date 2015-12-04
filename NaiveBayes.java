@@ -9,7 +9,10 @@ public class NaiveBayes {
 
 // constants
 int ATTRIBUTE_NUM = 10; //TODO update if necessary
-
+// attribute indices
+int SCHOLARSHIPS = 0;
+int DIVERSITY = 1;
+int IN_STATE = 2;
 
 // data structures
 ArrayList<University> totalSet = ArrayList<University>();
@@ -25,17 +28,23 @@ public NaiveBayes(String data){
 // take given classification list and compare against universities
 public void learn(ArrayList<Classification> classifications){
 
+Classification c;
+University u;
+bayesMemory.add(c, u);
 
 }
 
+public void classify(){
+
+}
 
 // for a given attribute, ie. scholarships, we need to get number of universities that have the attribute
-public double getRatio(Attribute a){
+public double getRatio(int attributeIndex){
 	int num = 0;
 	int total = 0;
 	for(University u : universities){
 		total++;
-		if(u.positiveAttribute(a))
+		if(u.attributeLikelihood(a))
 			num++;
 	}
 	return (double) num/total;
