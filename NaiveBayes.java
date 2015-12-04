@@ -7,6 +7,10 @@
 
 public class NaiveBayes {
 
+// constants
+int ATTRIBUTE_NUM = 10; //TODO update if necessary
+
+
 // data structures
 ArrayList<University> totalSet = ArrayList<University>();
 ArrayList<University> trainingSet = ArrayList<University>();
@@ -17,8 +21,6 @@ public NaiveBayes(String data){
 	totalSet.add(new University(data.split(',')));
 	trainingSet = this.extractTrainingSet(universities);
 }
-
-// public methods
 
 // take given classification list and compare against universities
 public void learn(ArrayList<Classification> classifications){
@@ -39,18 +41,51 @@ public double getRatio(Attribute a){
 	return (double) num/total;
 }
 
+public void csvToString(String file) throws Exception{
+	BufferedReader br = null;
+	String line = "";
+	String cvsSplitBy = ",";
+	StringBuilder universitiesString = new StringBuilder();
+	
+	br = BufferedReader(new FileReader(file));
+	while ((line = br.readLine()) != null) {
+		// get row
+		String[] rowString = line.split(cvsSplitBy);
+		// ensure our pre-processing is error-free
+		if(rowString.length != ATTRIBUTE_NUM+1)
+			throw new CsvParseException();
+		totalSet.add(new University(rowString));
+	}
+}
+
 public static void main(String args[]){
 
-File file_data = File.parse(args[1]);
-File file_classifications = File.parse(args[2]);
-//convert file to string
-String data;
-String classifications;
+	if(args.length != 2){
+		System.out.println("java NaiveBayes /data/csv/file.csv /classification/csv/file.csv");
+		return;
+	}
+	
+	NaiveBayes bayes = new NaiveBayes();
+	try{
+		bayes.csvToUniversities(args[1]);
+		bayes.csvToUniversities(args[2]);
+	}catch(CsvParseException e){
+		System.out.println("Format: data row consists of University_Name|Attribute1|Attribute2|etc, "+
+						"classification row consists of University|Classification";
+		return;
+	}catch(FileNotFoundException e){
+		System.out.println("File not found.");
+		return;
+	}catch(IOException e){
+		System.out.println("ioexception");
+		return;	
+	}catch(Exception e){
+		System.out.println("other exception");
+	}
 
-NaiveBayes bayes = new NaiveBayes(data, classifications);
-// learn the training set (~10% of data)
-bayes.learn();
-bayes.classify();
+	// learn the training set (~10% of data)
+	bayes.learn();
+	bayes.classify();
 
 }
 
