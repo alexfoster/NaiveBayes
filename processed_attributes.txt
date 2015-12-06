@@ -1,0 +1,12 @@
+Predominant degree granted: PREDDEG
+Admission rate: ADM_RATE or ADM_RATE_ALL
+avg net price for 0-48k for public: NPT4_048_PUB
+avg net price for 0-48k for private: NPT4_048_PRIV
+avg cost of attendance for academic-year: COSTT4_A
+% of undergrads who receive pell grant: PCTPELL
+completion rate for full time 4 year: C150_4
+percentage of ug receiving federal student loan: PCTFLOAN
+three year default rate: CDR3
+median debt for completers: GRAD_DEBT_MDN
+median family income: md_faminc
+median income of studnet 10 years after entry: md_earn_wne_p10
