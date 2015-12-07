@@ -1,19 +1,23 @@
+//import statements
+import java.util.*;
+import java.util.ArrayList;
+
 public class University{
 
-	Classification classification;
+	private String universityName;
+	private ArrayList<Attribute> attributeList;
+	private Classification classification;
 
-	// example attributes
-	Attribute scholarships;
-	Attribute diversity_ratio;
-	Attribute in_state;	
-
-
-	public University(String[] attributes){
-		for(int i=0; i<NaiveBayes.ATTRIBUTE_NUM; i++){
-			scholarships = new Attribute(attributes[i]);
+	public University(String[] nameAndAttributes){
+		attributeList = new ArrayList<Attribute>();
+		this.universityName = nameAndAttributes[0];
+		for(int i=1; i<NaiveBayes.ATTRIBUTE_NUM+1; i++){
+			this.attributeList.add(new Attribute(i, nameAndAttributes[i]));
 		}
 	}
 
-	public attributeLikelihood(int attributeIndex){
+	public void setClassification(String s){
+		this.classification = new Classification(s);
 	}
+
 }

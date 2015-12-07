@@ -1,6 +1,6 @@
 plan
 
-1. pre-process dataset, eliminate unneeded attributes
+1. pre-process dataset, eliminate unneeded attributes. DONE, have ~2000 instances.
 2. implement bayes
 	-learn(class, attributes[])
 	-handle discrete and continuous attributes with hardcoded 
