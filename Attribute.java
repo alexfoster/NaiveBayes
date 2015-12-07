@@ -3,7 +3,7 @@ public class Attribute{
 	double attributeValue;
 
 	public Attribute(int attributeType, String attribute){
-		this.attributeType = attributeType;
+		this.attributeType = attributeType - 1;
 		if(attribute == null || attribute.equals("NULL")){
 			this.attributeValue = -1.0;
 		}
@@ -16,17 +16,17 @@ public class Attribute{
 		}
 	}
 
-	public int getAttributeCategory(){
+	public int getCategory(){
 		if(this.attributeValue == -1.0){		// we have a null attribute, ignore it
 			return -1;
 		}
-		else if(this.attributeValue < NaiveBayes.attributeStatsList[attributeType][0]){
+		else if(this.attributeValue < NaiveBayes.attributeStatsList[this.attributeType][0]){
 			return 0;
 		}
-		else if(this.attributeValue < NaiveBayes.attributeStatsList[attributeType][1]){
+		else if(this.attributeValue < NaiveBayes.attributeStatsList[this.attributeType][1]){
 			return 1;
 		}
-		else if(this.attributeValue < NaiveBayes.attributeStatsList[attributeType][2]){
+		else if(this.attributeValue < NaiveBayes.attributeStatsList[this.attributeType][2]){
 			return 2;
 		}
 		else
