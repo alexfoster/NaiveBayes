@@ -306,7 +306,7 @@ Carver Bible College,0
 Clayton State University,0
 Columbus State University,0
 Covenant College,0
-Emmanuel College,0
+Emmanuel College_1,0
 Emory University,0
 Fort Valley State University,0
 Georgia Institute of Technology-Main Campus,0
@@ -352,7 +352,7 @@ Northwest Nazarene University,0
 Brigham Young University-Idaho,0
 American Academy of Art,0
 School of the Art Institute of Chicago,0
-Augustana College,0
+Augustana College_1,0
 Aurora University,0
 Blackburn College,0
 Blessing Rieman College of Nursing,0
@@ -425,8 +425,8 @@ Trinity International University-Illinois,0
 VanderCook College of Music,0
 Resurrection University,0
 Western Illinois University,0
-Wheaton College,0
-Anderson University,0
+Wheaton College_1,0
+Anderson University_1,0
 Ball State University,0
 Bethel College-Indiana,0
 Butler University,0
@@ -453,7 +453,7 @@ Indiana University-Northwest,0
 Indiana University-Southeast,0
 Indiana University-East,0
 Manchester University,0
-Marian University,0
+Marian University_1,0
 Indiana Wesleyan University,0
 Martin University,0
 University of Notre Dame,0
@@ -505,7 +505,7 @@ Wartburg College,0
 William Penn University,0
 Baker University,0
 Benedictine College,0
-Bethany College,0
+Bethany College_1,0
 Bethel College-North Newton,0
 Central Christian College of Kansas,0
 Emporia State University,0
@@ -525,7 +525,7 @@ Ottawa University-Kansas City,0
 Pittsburg State University,0
 University of Saint Mary,0
 Southwestern College,0
-Sterling College,0
+Sterling College_1,0
 Tabor College,0
 Washburn University,0
 Wichita State University,0
@@ -622,7 +622,7 @@ Notre Dame of Maryland University,0
 Salisbury University,0
 St Mary's College of Maryland,0
 Sojourner-Douglass College,0
-St John's College,0
+St John's College_1,0
 Towson University,0
 Stevenson University,0
 Washington College,0
@@ -649,7 +649,7 @@ Clark University,0
 Curry College,0
 Eastern Nazarene College,0
 Emerson College,0
-Emmanuel College,0
+Emmanuel College_2,0
 Endicott College,0
 Fitchburg State University,0
 Framingham State University,0
@@ -697,7 +697,7 @@ Wellesley College,0
 Wentworth Institute of Technology,0
 Western New England University,0
 Westfield State University,0
-Wheaton College,0
+Wheaton College_2,0
 Wheelock College,0
 Williams College,0
 Worcester Polytechnic Institute,0
@@ -749,7 +749,7 @@ Western Michigan University,0
 Augsburg College,0
 Bemidji State University,0
 Bethany Lutheran College,0
-Bethel University,0
+Bethel University_1,0
 Carleton College,0
 Concordia College at Moorhead,0
 Concordia University-Saint Paul,0
@@ -780,7 +780,7 @@ Saint Mary's University of Minnesota,0
 St Olaf College,0
 Crown College,0
 The College of Saint Scholastica,0
-University of St Thomas,0
+University of St Thomas_1,0
 St Catherine University,0
 Southwest Minnesota State University,0
 Winona State University,0
@@ -808,7 +808,7 @@ Central Christian College of the Bible,0
 Central Methodist University-College of Liberal Arts and Sciences,0
 University of Central Missouri,0
 Cleveland University-Kansas City,0
-Columbia College,0
+Columbia College_1,0
 Conception Seminary College,0
 Culver-Stockton College,0
 Drury University,0
@@ -848,7 +848,7 @@ Southeast Missouri State University,0
 Missouri State University-Springfield,0
 Washington University in St Louis,0
 Webster University,0
-Westminster College,0
+Westminster College_1,0
 William Jewell College,0
 William Woods University,0
 Carroll College,0
@@ -879,7 +879,6 @@ Nebraska Wesleyan University,0
 University of Nebraska-Lincoln,0
 Peru State College,0
 College of Saint Mary,0
-Union College,0
 Wayne State College,0
 York College,0
 The Art Institute of Las Vegas,0
@@ -1073,7 +1072,6 @@ Talmudical Institute of Upstate New York,0
 Torah Temimah Talmudical Seminary,0
 Touro College,0
 Excelsior College,0
-Union College,0
 United Talmudical Seminary,0
 United States Merchant Marine Academy,0
 Utica College,0
@@ -1391,7 +1389,7 @@ Villanova University,0
 Washington & Jefferson College,0
 Waynesburg University,0
 West Chester University of Pennsylvania,0
-Westminster College,0
+Westminster College_2,0
 Widener University-Main Campus,0
 Wilkes University,0
 Wilson College,0
@@ -1407,7 +1405,7 @@ Roger Williams University,0
 Salve Regina University,0
 Northpoint Bible College,0
 Allen University,0
-Anderson University,0
+Anderson University_2,0
 Charleston Southern University,0
 Benedict College,0
 Bob Jones University,0
@@ -1418,7 +1416,7 @@ Claflin University,0
 Clemson University,0
 Coker College,0
 Columbia International University,0
-Columbia College,0
+Columbia College_2,0
 Converse College,0
 Erskine College,0
 Francis Marion University,0
@@ -1439,7 +1437,7 @@ University of South Carolina-Upstate,0
 Voorhees College,0
 Winthrop University,0
 Wofford College,0
-Augustana College,0
+Augustana College_2,0
 Black Hills State University,0
 Dakota State University,0
 Dakota Wesleyan University,0
@@ -1455,7 +1453,7 @@ American Baptist College,0
 Austin Peay State University,0
 Baptist Memorial College of Health Sciences,0
 Belmont University,0
-Bethel University,0
+Bethel University_2,0
 Bryan College-Dayton,0
 Carson-Newman University,0
 Christian Brothers University,0
@@ -1537,7 +1535,7 @@ Paul Quinn College,0
 Prairie View A & M University,0
 Rice University,0
 Saint Edward's University,0
-University of St Thomas,0
+University of St Thomas_2,0
 Sam Houston State University,0
 Schreiner University,0
 St Mary's University,0
@@ -1581,7 +1579,7 @@ Utah State University,0
 Utah Valley University,0
 University of Utah,0
 Weber State University,0
-Westminster College,0
+Westminster College_3,0
 Bennington College,0
 Burlington College,0
 Castleton State College,0
@@ -1596,7 +1594,7 @@ Norwich University,0
 Saint Michael's College,0
 College of St Joseph,0
 Southern Vermont College,0
-Sterling College,0
+Sterling College_2,0
 University of Vermont,0
 Averett University,0
 Bluefield College,0
@@ -1666,7 +1664,7 @@ Whitman College,0
 Whitworth University,0
 Alderson Broaddus University,0
 Appalachian Bible College,0
-Bethany College,0
+Bethany College_2,0
 Bluefield State College,0
 University of Charleston,0
 Concord University,0
@@ -1695,7 +1693,7 @@ Edgewood College,0
 Lakeland College,0
 Lawrence University,0
 Maranatha Baptist University,0
-Marian University,0
+Marian University_2,0
 Marquette University,0
 Milwaukee Institute of Art & Design,0
 Milwaukee School of Engineering,0
@@ -1722,7 +1720,6 @@ University of Wisconsin-River Falls,0
 University of Wisconsin-Stevens Point,0
 University of Wyoming,0
 University of Guam,0
-American University of Puerto Rico,0
 American University of Puerto Rico,0
 Universidad Adventista de las Antillas,0
 Atlantic University College,0
@@ -1765,7 +1762,7 @@ Stanford University,0
 Purdue University-Main Campus,0
 Parker University,0
 Widener University-Delaware Campus,0
-St John's College,0
+St John's College_2,0
 Yeshiva and Kollel Harbotzas Torah,0
 Bais Medrash Elyon,0
 Antioch University-Los Angeles,0
@@ -2018,7 +2015,7 @@ Yeshiva Toras Chaim,0
 Talmudical Seminary of Bobov,0
 University of South Florida-Sarasota-Manatee,0
 The Art Institute of Austin,0
-The Art Institutes International�??Kansas City,0
+The Art Institutes International Kansas City,0
 Argosy University-Salt Lake City,0
 Strayer University-Kentucky,0
 Strayer University-North Carolina,0

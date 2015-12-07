@@ -8,4 +8,8 @@ public class Classification{
 	public int getClassification(){
 		return this.classification;
 	}
+	
+	public String toString(){
+		return "Classification: "+this.classification;
+	}
 }	

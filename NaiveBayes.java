@@ -76,24 +76,51 @@ public void csvToUniversities(String attributeFile, String classificationFile) t
 	StringBuilder universitiesString = new StringBuilder();
 	
 	brAttributes = new BufferedReader(new FileReader(attributeFile));
+	int i=0;	
+	boolean foundIt = false;
 	brAttributes.readLine();								// skip column names
+	try{
 	while ((line = brAttributes.readLine()) != null) {
 		// get row of 1 uni name and 10 attributes
+		if(line.isEmpty() || line == null)
+			System.out.println("empty line at : "+i);
 		String[] rowString = line.split(cvsSplitBy);
 		// ensure our pre-processing is error-free
-		if(rowString.length != ATTRIBUTE_NUM+1)
+		if(rowString.length != ATTRIBUTE_NUM+1){	
+			System.out.println("csv parse in load attributesList row: "+i+" , length: "+rowString.length +
+							" content: "+printArray(rowString));
 			throw new CsvParseException();
+		}
 		University university = new University(rowString);
-		totalMap.put(rowString[0], university);			// put (universityName, university object)
+		if(totalMap.containsKey(rowString[0].trim()))
+			System.out.println("repeat college at : "+rowString[0].trim());
+		totalMap.put(rowString[0].trim(), university);			// put (universityName, university object)
+		if(!(totalMap.containsKey(rowString[0].trim())))
+			System.out.println("not successfully put in hashtable at : "+i);
+		i++;
+		if(totalMap.size() != i && foundIt == false){
+			System.out.println("problems begin at : "+i); 
+			foundIt = true;
+		}
 	}
+	}catch(Exception e){
+		System.out.println("readLine error at line : "+i);
+		e.printStackTrace();
+	}
+	System.out.println(i+" lines parses apart from col headers, totalMap size is : "+totalMap.size());
+	brAttributes.close();
 
 	brClassifications = new BufferedReader(new FileReader(classificationFile));
+	brClassifications.readLine();						// skip column names
 	while((line = brClassifications.readLine()) != null) {
 		String[] rowString = line.split(cvsSplitBy);
-		if(rowString.length != 2)
+		if(rowString.length != 2){	
+			System.out.println("csv parse in load classificationsList, length: "+rowString.length);
 			throw new CsvParseException();
+		}
 		totalMap.get(rowString[0]).setClassification(rowString[1]);		
 	}
+	brClassifications.close();
 }
 
 // load attributeStatsList with our statistics for each attribute (1st quartile, median, 3rd quartile)
@@ -110,13 +137,38 @@ public void loadStatsList(String statsFile) throws Exception{
 		// get row of 1 uni name and 10 attributes
 		String[] rowString = line.split(cvsSplitBy);
 		// ensure our pre-processing is error-free
-		if(rowString.length != STATS_NUM+1)
+		if(rowString.length != STATS_NUM+1){
+			System.out.println("csv parse in load StatsList, length: "+rowString.length);
 			throw new CsvParseException();		// we ignore 0 index cause it contains row name
+		}
 		attributeStatsList[i][FIRST_QUARTILE] = Double.parseDouble(rowString[1]);
 		attributeStatsList[i][MEDIAN] = Double.parseDouble(rowString[2]);
 		attributeStatsList[i][THIRD_QUARTILE] = Double.parseDouble(rowString[3]);
 		i++;	
-	}	
+	}
+	br.close();	
+}
+
+//debugging
+public String printArray(String[] array){
+	String s = "";
+	for(int i=0; i<array.length; i++){
+		s += (array[i] + "\n");
+	}
+	return s;
+}
+
+//debugging
+public void printDataStructures(){
+	System.out.println(totalMap.size());
+	System.out.println(totalMap.get("Emerson College"));
+	System.out.println(totalMap.get("Eastern Nazarene College"));
+	for(int i=0; i<attributeStatsList.length; i++){
+		for(int j=0; j<attributeStatsList[i].length; j++){
+			System.out.print(attributeStatsList[i][j]+", ");
+		}
+		System.out.println();
+	}
 }
 
 public static void main(String args[]){
@@ -129,8 +181,8 @@ public static void main(String args[]){
 	
 	NaiveBayes bayes = new NaiveBayes();
 	try{
-		bayes.csvToUniversities(args[1], args[2]);
-		bayes.loadStatsList(args[3]);
+		bayes.csvToUniversities(args[0], args[1]);
+		bayes.loadStatsList(args[2]);
 	}catch(CsvParseException e){
 		System.out.println("Format: data row consists of University_Name|Attribute1|Attribute2|etc, "+
 						"classification row consists of University|Classification");
@@ -142,8 +194,11 @@ public static void main(String args[]){
 		System.out.println("ioexception");
 		return;	
 	}catch(Exception e){
-		System.out.println("other exception");
+		System.out.println("other exception\n");
+		e.printStackTrace();
 	}
+
+	bayes.printDataStructures();
 
 	// learn the training set (~10% of data)
 	//bayes.learn();

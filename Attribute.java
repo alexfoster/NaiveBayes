@@ -7,10 +7,12 @@ public class Attribute{
 		if(attribute == null || attribute.equals("NULL")){
 			this.attributeValue = -1.0;
 		}
-		try{
-			this.attributeValue = Double.parseDouble(attribute.trim());
-		}catch(Exception e){
-			System.out.println("failed to double parse attribute string : "+attribute);
+		else{
+			try{
+				this.attributeValue = Double.parseDouble(attribute.trim());
+			}catch(Exception e){
+				System.out.println("failed to double parse attribute string : "+attribute);
+			}
 		}
 	}
 
@@ -29,5 +31,9 @@ public class Attribute{
 		}
 		else
 			return 3;
+	}
+	
+	public String toString(){
+		return this.attributeType+": "+this.attributeValue;
 	}
 }
