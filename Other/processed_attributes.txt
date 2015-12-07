@@ -1,7 +1,5 @@
-Predominant degree granted: PREDDEG
-Admission rate: ADM_RATE or ADM_RATE_ALL
-avg net price for 0-48k for public: NPT4_048_PUB
-avg net price for 0-48k for private: NPT4_048_PRIV
+Admission rate: ADM_RATE
+avg net price for 0-48k for all universities: NPT4_048_ALL
 avg cost of attendance for academic-year: COSTT4_A
 % of undergrads who receive pell grant: PCTPELL
 completion rate for full time 4 year: C150_4
