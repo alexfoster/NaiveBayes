@@ -6,7 +6,7 @@ public class University{
 
 	public String universityName;
 	public ArrayList<Attribute> attributeList;
-	public Classification classification;
+	public int classification;
 
 	public University(String[] nameAndAttributes){
 		attributeList = new ArrayList<Attribute>();
@@ -15,11 +15,7 @@ public class University{
 			this.attributeList.add(new Attribute(i, nameAndAttributes[i]));	// indices 0-9
 		}
 	}
-
-	public int getAttributeCategory(int attributeIndex){					// param 0-9
-		return this.attributeList.get(attributeIndex).getCategory();		// indices 0-9
-	}
-
+	
 	public String toString(){
 		String s = "";
 		s += this.universityName + ": \n";
@@ -30,12 +26,20 @@ public class University{
 		return s;
 	}
 
-	public Classification getClassification(){
+	public String getName(){
+		return this.universityName;
+	}
+
+	public double getAttribute(int index){
+		return this.attributeList.get(index).getValue();
+	}
+
+	public int getClassification(){
 		return this.classification;
 	}
 
-	public void setClassification(String s){
-		this.classification = new Classification(s);
+	public void setClassification(int s){
+		this.classification = s;
 	}
 	
 

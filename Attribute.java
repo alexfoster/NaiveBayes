@@ -16,24 +16,11 @@ public class Attribute{
 		}
 	}
 
-	public int getCategory(){
-		if(this.attributeValue == -1.0){		// we have a null attribute, ignore it
-			return -1;
-		}
-		else if(this.attributeValue < NaiveBayes.attributeStatsList[this.attributeType][0]){
-			return 0;
-		}
-		else if(this.attributeValue < NaiveBayes.attributeStatsList[this.attributeType][1]){
-			return 1;
-		}
-		else if(this.attributeValue < NaiveBayes.attributeStatsList[this.attributeType][2]){
-			return 2;
-		}
-		else
-			return 3;
-	}
-	
 	public String toString(){
 		return this.attributeType+": "+this.attributeValue;
+	}
+
+	public double getValue(){
+		return this.attributeValue;
 	}
 }

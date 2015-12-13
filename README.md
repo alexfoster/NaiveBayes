@@ -1,4 +1,5 @@
 # NaiveBayes
 Java implementation of Naive Bayes
 
-Hello world! 
+compile and run with:
+java NaiveBayes Other/processed_data_bachelors.csv Other/classifications.csv 
